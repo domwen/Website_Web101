@@ -2333,14 +2333,7 @@ fieldset[disabled] .btn-default.active {
   border-color: #357ebd;
 }
 
-}
 
-.btn-primary2 {
-  color: #00FF00;
-  background-color: #FF00D4;
-  border-color: #357ebd;
-}
-}
 
 .btn-primary:hover,
 .btn-primary:focus,
@@ -5241,6 +5234,17 @@ a.list-group-item.active > .badge,
   line-height: 2.1428571435;
   color: inherit;
   background-color: #eeeeee;
+	
+	}
+
+.jumbotron2 {
+  padding: 30px;
+  margin-bottom: 3px;
+  font-size: 21px;
+  font-weight: 200;
+  line-height: 0.1428571435;
+  color: inherit;
+  background-color: #AAFFAA;
 }
 
 .jumbotron h1 {
