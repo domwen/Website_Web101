@@ -15,8 +15,12 @@ $(document).ready(function() {
 * This is an example function
 */
 function outputValue() {
-	var value1 = $('#number1').val();
-	var value2 = $('#number2').val();
+	var value1 = parseInt($('#number1').val(),10);
+	var value2 = parseInt($('#number2').val(),10);
+	/*var value2Int = parseint(value2);*/
 	console.log("Values are " + value1 + " and " + value2);
+	var sum = value1 + value2;
+	console.log("Sum is " + sum);
+	$("#sum").html(sum);
 	return false;
 }
