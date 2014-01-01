@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
+
+    <title>Jumbotron Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+       <link rel="stylesheet" href="css/jumbotron.css" type="text/css">
+      
+    <!-- CSS for calculator table
+      <link rel="stylesheet" href="css/percalculator.css" type="text/css"> -->
+      
+
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+
+      <style type=text/css>
+.p_t{width:100%}
+.p_t td{padding:8px}
+td.p_sep{font-size:2px;border-top:1px dotted #666}
+}
+</style>
+
+    
+    <script>
+function calc1(){
+v1 = document.form1.num1.value/100;
+v2 = v1*document.form1.num2.value;
+document.form1.result1.value = v2
+}
+function calc2(){
+v1 = document.form1.num3.value;
+v2 = document.form1.num4.value;
+v3 = v1/v2;
+document.form1.result2.value = v3*100;
+}
+function calc3(){
+v1 = document.form1.num5.value;
+v2 = document.form1.num6.value/100;
+document.form1.result3.value = v1/v2;
+}
+</script>
+
+      
+      
+    
+    </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand">Project calculator</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          
+        </div><!--/.navbar-collapse -->
+      </div>
+    </div>
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+       <p> <h1>Hi!</h1></p>
+                      </div>
+    </div>
+    <div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+         </div>
+		
+		<div class="g w"><div class=u id=w4><div class=g><div class=u><h1 class=z2>Percentage Calculator</h1></div></div>
+
+	<div id=c1>
+	
+<form name=form1>
+<table class=p_t>
+<tr>
+<td>What is <input type=text name=num1 size=8> % of <input type=text name=num2 size=8>?</td>
+</tr>
+<tr>
+<td><input type=button value=Calculate onClick="calc1()">&nbsp;&nbsp;Answer: <input type=text name=result1 size=10></td>
+</tr>
+<tr><td class=p_sep></td></tr>
+<tr>
+<td><input type=text name=num3 size=8> is what percent of <input type=text name=num4 size=8>?</td>
+</tr>
+<tr>
+<td><input type=button value=Calculate onClick="calc2()">&nbsp;&nbsp;Answer: <input type=text name=result2 size=10>%</td>
+</tr>
+<tr><td class=p_sep></td></tr>
+<tr>
+<td><input type=text name=num5 size=8> is <input type=text name=num6 size=8>% of what?</td>
+</tr>
+<tr>
+<td><input type=button value=Calculate onClick="calc3()">&nbsp;&nbsp;Answer: <input type=text name=result3 size=10></td>
+</tr>
+</table>
+</form>
+
+	</div>
+            </div>
+
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+	<script src="js/main.js"></script>
+  </body>
+</html>
