@@ -17,10 +17,15 @@ $(document).ready(function() {
 function outputValue() {
 	var value1 = parseInt($('#number1').val(),10);
 	var value2 = parseInt($('#number2').val(),10);
-	/*var value2Int = parseint(value2);*/
-	console.log("Values are " + value1 + " and " + value2);
+    var number1 = §('#number1').val;
+       if (number1.length == 0){
+        alert("NOOO");
+    }
+        else{
+		console.log("Values are " + value1 + " and " + value2);
 	var sum = value1 + value2;
 	console.log("Sum is " + sum);
 	$("#sum").html(sum);
 	return false;
+        }
 }
