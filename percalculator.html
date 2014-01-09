@@ -40,28 +40,73 @@ td.p_sep{font-size:2px;border-top:1px dotted #666}
 
     
     <script>
+
 function calc1(){
+	
+	var errorMessage;
+	
+	if(document.form1.num1.value == "" && document.form1.num2.value == "")
+		errorMessage = "Please enter numbers in both fields.";
+	else if(document.form1.num1.value == "" && document.form1.num2.value != "")
+		errorMessage = "Please enter a number in field 1.";
+	else if(document.form1.num1.value != "" && document.form1.num2.value == "")
+		errorMessage = "Please enter a number in field 2.";
+		
+	if(errorMessage)
+	{
+		alert("Something went wrong: " + errorMessage);
+		return;
+	}
+	
 v1 = document.form1.num1.value/100;
 v2 = v1*document.form1.num2.value;
 document.form1.result1.value = v2
 }
+
 function calc2(){
+		var errorMessage2;
+	
+	if(document.form1.num3.value == "" && document.form1.num4.value == "")
+		errorMessage2 = "Please enter numbers in both fields.";
+	else if(document.form1.num3.value == "" && document.form1.num4.value != "")
+		errorMessage2 = "Please enter a number in field 1.";
+	else if(document.form1.num3.value != "" && document.form1.num4.value == "")
+		errorMessage2 = "Please enter a number in field 2.";
+		
+	if(errorMessage2)
+	{
+		alert("Something went wrong: " + errorMessage2);
+		return;
+	}
+	
 v1 = document.form1.num3.value;
 v2 = document.form1.num4.value;
 v3 = v1/v2;
 document.form1.result2.value = v3*100;
 }
+		
 function calc3(){
+			var errorMessage3;
+	
+	if(document.form1.num5.value == "" && document.form1.num6.value == "")
+		errorMessage3 = "Please enter numbers in both fields.";
+	else if(document.form1.num5.value == "" && document.form1.num6.value != "")
+		errorMessage3 = "Please enter a number in field 1.";
+	else if(document.form1.num5.value != "" && document.form1.num6.value == "")
+		errorMessage3 = "Please enter a number in field 2.";
+		
+	if(errorMessage3)
+	{
+		alert("Something went wrong: " + errorMessage3);
+		return;
+	}
 v1 = document.form1.num5.value;
 v2 = document.form1.num6.value/100;
 document.form1.result3.value = v1/v2;
 }
 </script>
 
-      
-      
-    
-    </head>
+</head>
 
   <body>
 
