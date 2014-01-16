@@ -9,27 +9,25 @@ $(document).ready(function() {
 });
 
 
-/* function check() {
+function checkForEmptyInputs() {
 	var errorMessage;
-	if($('#number1').val == "" && $('#number2').val  == "")
-		errorMessage = "Please enter numbers in both fields.";
-	else if($('#number1').val  == "" && $('#number2').val  != "")
-		errorMessage = "Please enter a number in field 1.";
-	else if($('#number1').val != "" && $('#number2').val  == "")
-		errorMessage = "Please enter a number in field 2.";
-		
-	if(errorMessage)
-	{
-		alert("Something went wrong: " + errorMessage);
-		return;
+	if ($('#number1').val() == "" || $('#number2').val()  == "") {
+		// Show error message
+		alert('Error: Both fields must contain a number');
+		return true;
+	} else {
+		return false;
 	}
-} */
+}
 
 function appendToHistory(resultText) {
     $('#history').append('<li>' + resultText +'</li>');
 }                         
 
 function calcSum() {
+	if (checkForEmptyInputs()) {
+		return false;
+	}		
 	var value1 = parseInt($('#number1').val(),10);
 	var value2 = parseInt($('#number2').val(),10);
     /* var number1 = $('#number1').val;
@@ -48,6 +46,9 @@ function calcSum() {
 
 
 function percalc1(){
+	if (checkForEmptyInputs()) {
+		return;
+	}		
 	var value1 = parseInt($('#number1').val(),10)/100;
 	var value2 = value1*parseInt($('#number2').val(),10);
 	console.log("The result is " + value2);
@@ -57,6 +58,9 @@ function percalc1(){
 }
 
 function percalc2(){
+	if (checkForEmptyInputs()) {
+		return;
+	}		
 	var value1 = parseInt($('#number1').val(),10);
 	var value2 = parseInt($('#number2').val(),10);
 	var value3 = (value1/value2)*100;
@@ -67,6 +71,9 @@ function percalc2(){
 }
 		
 function percalc3(){
+	if (checkForEmptyInputs()) {
+		return;
+	}		
 	var value1 = parseInt($('#number1').val(),10);
 	var value2 = parseInt($('#number2').val(),10)/100;
 	var value3 = value1/value2;
