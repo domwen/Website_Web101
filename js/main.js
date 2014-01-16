@@ -33,7 +33,7 @@ $(document).ready(function() {
 
 function appendToHistory(resultText)
 {
-    $('#historydiv ul').append('<li>' + resultText +'</li>');
+    $('#history').append('<li>' + resultText +'</li>');
 }                         
 
 function calcSum() {
