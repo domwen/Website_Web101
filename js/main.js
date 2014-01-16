@@ -4,42 +4,24 @@
 $(document).ready(function() {
 	console.log("hello world!");
 	// Animation
-	$("#singlebutton").hide().show("slowly"); 
+	$("#addButton").hide().show("slowly"); 
 	// Change color of button
-	$("#singlebutton").removeClass('btn-primary').addClass('btn-warning');
-	$("#singlebutton").click(outputValue);	
+	$("#addButton").removeClass('btn-primary').addClass('btn-warning');
+	$("#addButton").click(calcSum);	
+	$("#perc1Button").click(percalc1);	
+	$("#perc2Button").click(percalc2);	
+	$("#perc3Button").click(percalc3);
 });
 
 
-/*
-* This is an example function
-*/
-function outputValue() {
-	var value1 = parseInt($('#number1').val(),10);
-	var value2 = parseInt($('#number2').val(),10);
-    var number1 = §('#number1').val;
-       if (number1.length == 0){
-        alert("NOOO");
-    }
-        else{
-		console.log("Values are " + value1 + " and " + value2);
-	var sum = value1 + value2;
-	console.log("Sum is " + sum);
-	$("#sum").html(sum);
-	return false;
-        }
-}
-
-
-function calc1(){
-	
+/* function check() {
 	var errorMessage;
 	
-	if("$form1.num1.value == "" && document.form1.num2.value == "")
+	if($('#number1').val == "" && $('#number2').val  == "")
 		errorMessage = "Please enter numbers in both fields.";
-	else if(document.form1.num1.value == "" && document.form1.num2.value != "")
+	else if($('#number1').val  == "" && $('#number2').val  != "")
 		errorMessage = "Please enter a number in field 1.";
-	else if(document.form1.num1.value != "" && document.form1.num2.value == "")
+	else if($('#number1').val != "" && $('#number2').val  == "")
 		errorMessage = "Please enter a number in field 2.";
 		
 	if(errorMessage)
@@ -47,14 +29,48 @@ function calc1(){
 		alert("Something went wrong: " + errorMessage);
 		return;
 	}
+} */
+
+function appendToHistory(resultText)
+{
+    $('#historydiv ul').append('<li>' + resultText +'</li>');
+}                         
+
+function calcSum() {
+	var value1 = parseInt($('#number1').val(),10);
+	var value2 = parseInt($('#number2').val(),10);
+    /* var number1 = $('#number1').val;
+       if (number1.length == 0){
+        alert("NOOO");
+    }
+        else{
+		console.log("Values are " + value1 + " and " + value2); */
+	var sum = value1 + value2;
+	console.log("Sum is " + sum);
+	$("#result").html(sum);
+	appendToHistory("The sum is " + sum);
+	return false; 
+        }
+
+
+
+function percalc1(){
 	
-v1 = $("#number1").val/100;
-v2 = v1*$("#number2").val;
-document.form1.result1.value = v2
+	
+	
+var value1 = parseInt($('#number1').val(),10)/100;
+var value2 = value1*parseInt($('#number2').val(),10);
+	console.log("The result is " + value2);
+	$("#result").html(value2);
+	appendToHistory("n1% of n2 is " + value2);
+    return false;
+        
+
+
 }
 
-function calc2(){
-		var errorMessage2;
+function percalc2(){
+/*		var errorMessage2;
 	
 	if(document.form1.num3.value == "" && document.form1.num4.value == "")
 		errorMessage2 = "Please enter numbers in both fields.";
@@ -67,16 +83,19 @@ function calc2(){
 	{
 		alert("Something went wrong: " + errorMessage2);
 		return;
-	}
+	} */
 	
-v1 = document.form1.num3.value;
-v2 = document.form1.num4.value;
-v3 = v1/v2;
-document.form1.result2.value = v3*100;
+var value1 = parseInt($('#number1').val(),10);
+var value2 = parseInt($('#number2').val(),10);
+var value3 = (value1/value2)*100;
+	console.log("The result is " + value3);
+	$("#result").html(value3);
+	appendToHistory("n1 is " + value3 + "% of n2");
+    return false;
 }
 		
-function calc3(){
-			var errorMessage3;
+function percalc3(){
+	/*		var errorMessage3;
 	
 	if(document.form1.num5.value == "" && document.form1.num6.value == "")
 		errorMessage3 = "Please enter numbers in both fields.";
@@ -89,8 +108,12 @@ function calc3(){
 	{
 		alert("Something went wrong: " + errorMessage3);
 		return;
-	}
-v1 = document.form1.num5.value;
-v2 = document.form1.num6.value/100;
-document.form1.result3.value = v1/v2;
+	} */
+var value1 = parseInt($('#number1').val(),10);
+var value2 = parseInt($('#number2').val(),10)/100;
+var value3 = value1/value2;
+	console.log("The result is " + value3);
+	$("#result").html(value3);
+	appendToHistory("n1 is n2% of " + value3);
+    return false;
 }
